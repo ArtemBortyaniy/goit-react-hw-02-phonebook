@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import { ContactForm } from "./ContactForm/ContactForm";
 import { Filter } from "./Filter/Filter";
 import { ContactList } from "./ContactList/ContactList";
+import { Title } from "./Title/Title";
 
 class App extends Component {
   state = {
@@ -49,10 +50,9 @@ class App extends Component {
   render () {
     return (
       <div>
-        <h1>Phonebook</h1>
+        <Title title={'Phonebook'} H1={'h1'}></Title>
         <ContactForm onSabmit={this.addContact}></ContactForm>
-
-        <h2>Contacts</h2>
+        <Title title={'Contacts'}></Title>
         <Filter value={this.state.filter} onChange={this.changeFilter}></Filter>
         <ContactList contacts={this.handleFilter()} onDeleteContact={this.deleteContact}></ContactList>
       </div>
