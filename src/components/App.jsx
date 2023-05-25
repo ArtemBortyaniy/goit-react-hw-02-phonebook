@@ -38,9 +38,7 @@ class App extends Component {
   handleFilter = () => {
     const { contacts } = this.state;
     
-    const filter = contacts.filter(({name}) => name.toLowerCase().includes(this.state.filter.toLowerCase()));
-    
-    return filter;
+    return contacts.filter(({name}) => name.toLowerCase().includes(this.state.filter.toLowerCase()));
   }
 
   changeFilter = (e) => {
