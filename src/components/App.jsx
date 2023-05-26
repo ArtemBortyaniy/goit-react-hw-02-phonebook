@@ -48,9 +48,9 @@ class App extends Component {
   render () {
     return (
       <div>
-        <Title title={'Phonebook'} H1={'h1'}></Title>
+        <Title title={'Phonebook'} type={'h1'}></Title>
         <ContactForm onSabmit={this.addContact}></ContactForm>
-        <Title title={'Contacts'}></Title>
+        <Title title={'Contacts'} type={'h2'}></Title>
         <Filter value={this.state.filter} onChange={this.changeFilter}></Filter>
         <ContactList contacts={this.handleFilter()} onDeleteContact={this.deleteContact}></ContactList>
       </div>
